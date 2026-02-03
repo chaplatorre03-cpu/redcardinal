@@ -29,7 +29,7 @@ export default function HeroSection() {
                         </AnimatedSection>
 
                         <AnimatedSection animation="fade-up" delay={200}>
-                            <div className="space-y-4 text-red-100 mb-4 max-w-lg">
+                            <div className="space-y-4 text-red-100 mb-8 max-w-lg">
                                 <p>
                                     Las redes sociales se han convertido en una herramienta digital necesaria e imprescindible
                                     para el <strong className="text-white">crecimiento, la reputación, la generación de clientes y credibilidad</strong> de las empresas.
