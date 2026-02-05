@@ -4,7 +4,7 @@ import AnimatedSection from './AnimatedSection';
 
 export default function HeroSection() {
     return (
-        <section id="inicio" className="min-h-[60vh] flex items-start bg-gradient-to-br from-red-600 via-red-700 to-red-800 pt-[100px] relative overflow-hidden">
+        <section id="inicio" className="min-h-[60vh] flex items-start bg-gradient-to-br from-red-600 via-red-700 to-red-800 pt-[80px] relative overflow-hidden">
             {/* Animated background blobs */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-20 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl blob blob-1"></div>
@@ -41,7 +41,7 @@ export default function HeroSection() {
                             </div>
                         </AnimatedSection>
 
-                        <AnimatedSection animation="fade-up" delay={300}>
+                        <AnimatedSection animation="fade-up" delay={300} className="mb-12">
                             <a
                                 href="#contacto"
                                 onClick={(e) => {
