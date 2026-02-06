@@ -29,9 +29,9 @@ export default function Footer() {
                         <p>&copy; {new Date().getFullYear()} Red Cardinal. Todos los derechos reservados.</p>
                     </div>
                     <div className="flex space-x-6">
-                        <a href="#" className="hover:text-white transition-colors">Aviso Legal</a>
-                        <a href="#" className="hover:text-white transition-colors">Política de Privacidad</a>
-                        <a href="#" className="hover:text-white transition-colors">Política de Cookies</a>
+                        <a href="/legal/aviso-legal" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Aviso Legal</a>
+                        <a href="/legal/politica-privacidad" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Política de Privacidad</a>
+                        <a href="/legal/politica-cookies" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Política de Cookies</a>
                     </div>
                 </div>
             </div>

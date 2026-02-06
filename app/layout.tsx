@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   keywords: "marketing digital, redes sociales, publicidad digital, SEO, Google Ads, Facebook Ads, Instagram, agencia marketing Bogotá",
   icons: {
     icon: "/logos/red-cardinal-logo.png",
+    shortcut: "/logos/red-cardinal-logo.png",
     apple: "/logos/red-cardinal-logo.png",
   },
 };
