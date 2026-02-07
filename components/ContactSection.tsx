@@ -5,7 +5,7 @@ import AnimatedSection from './AnimatedSection';
 
 export default function ContactSection() {
     return (
-        <section id="contacto" className="pt-0.5 pb-8 md:pt-[18px] md:pb-12 bg-gray-50 relative overflow-hidden">
+        <section id="contacto" className="pt-8 pb-8 md:pt-[18px] md:pb-12 bg-gray-50 relative overflow-hidden">
             {/* Animated background blobs */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-0 left-0 w-80 h-80 bg-red-100/50 rounded-full blur-3xl blob blob-1 -translate-x-1/2 -translate-y-1/2"></div>
