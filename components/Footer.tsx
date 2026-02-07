@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import WhatsAppButton from './WhatsAppButton';
+import LegalLink from './LegalLink';
 
 export default function Footer() {
     return (
@@ -28,10 +29,10 @@ export default function Footer() {
                     <div className="mb-4 md:mb-0">
                         <p>&copy; {new Date().getFullYear()} Red Cardinal. Todos los derechos reservados.</p>
                     </div>
-                    <div className="flex space-x-6">
-                        <a href="/legal/aviso-legal" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Aviso Legal</a>
-                        <a href="/legal/politica-privacidad" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Política de Privacidad</a>
-                        <a href="/legal/politica-cookies" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Política de Cookies</a>
+                    <div className="flex space-x-6 pr-4 md:pr-10">
+                        <LegalLink slug="aviso-legal" pdfPath="/documentos/Aviso_Legal_Red_Cardinal.pdf">Aviso Legal</LegalLink>
+                        <LegalLink slug="politica-privacidad" pdfPath="/documentos/Politica_de_Privacidad_Red_Cardinal.pdf">Política de Privacidad</LegalLink>
+                        <LegalLink slug="politica-cookies" pdfPath="/documentos/Politica_de_Cookies_Red_Cardinal.pdf">Política de Cookies</LegalLink>
                     </div>
                 </div>
             </div>
@@ -41,3 +42,4 @@ export default function Footer() {
         </footer>
     );
 }
+

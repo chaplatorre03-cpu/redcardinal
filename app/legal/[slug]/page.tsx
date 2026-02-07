@@ -50,10 +50,10 @@ export default async function LegalPage({ params }: Props) {
     }
 
     return (
-        <div className="fixed inset-0 w-screen h-screen overflow-hidden bg-[#323639] flex flex-col">
+        <div className="fixed inset-0 w-screen h-screen overflow-hidden bg-[#323639] flex flex-col items-center justify-center p-4 md:p-10">
             <iframe
-                src={`${doc.file}#toolbar=0&navpanes=0&view=FitH&zoom=100`}
-                className="w-full h-full border-none"
+                src={`${doc.file}#toolbar=0&navpanes=0&view=FitH&zoom=80`}
+                className="w-full max-w-6xl h-full border-none shadow-2xl rounded-sm"
                 title={doc.title}
             />
         </div>
