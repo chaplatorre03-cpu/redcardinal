@@ -1,8 +1,13 @@
 'use client';
 
+import { useEffect } from 'react';
 import AnimatedSection from './AnimatedSection';
 
 export default function HeroSection() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <section id="inicio" className="min-h-[60vh] flex items-start bg-gradient-to-br from-red-600 via-red-700 to-red-800 pt-[80px] relative overflow-hidden">
             {/* Animated background blobs */}
@@ -17,8 +22,8 @@ export default function HeroSection() {
                     {/* Left Content */}
                     <div className="text-white">
                         <AnimatedSection animation="fade-up" delay={0}>
-                            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight mb-6">
-                                Agencia de Marketing Digital<br />para Empresas Creativas
+                            <h1 className="text-[1.8rem] sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                                Agencia de Marketing Digital para Empresas Creativas
                             </h1>
                         </AnimatedSection>
 
@@ -65,7 +70,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Right - Phone Mockup */}
-                    <AnimatedSection animation="fade-left" delay={200} className="flex justify-center lg:justify-end">
+                    <AnimatedSection animation="fade-left" delay={200} className="flex justify-center lg:justify-end -mt-12 lg:mt-0">
                         <div className="relative w-72 md:w-80">
                             {/* Phone Frame */}
                             <div className="bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl hover-lift">

@@ -100,6 +100,8 @@ export default function ContactForm() {
                         className={inputClasses('nombre')}
                         required
                         disabled={isSubmitting}
+                        onInvalid={(e) => (e.target as HTMLInputElement).setCustomValidity('Por favor, completa este campo.')}
+                        onInput={(e) => (e.target as HTMLInputElement).setCustomValidity('')}
                     />
                 </div>
 
@@ -115,6 +117,15 @@ export default function ContactForm() {
                         className={inputClasses('correo')}
                         required
                         disabled={isSubmitting}
+                        onInvalid={(e) => {
+                            const target = e.target as HTMLInputElement;
+                            if (target.validity.valueMissing) {
+                                target.setCustomValidity('Por favor, completa este campo.');
+                            } else if (target.validity.typeMismatch) {
+                                target.setCustomValidity('Por favor, introduce un correo electrónico válido.');
+                            }
+                        }}
+                        onInput={(e) => (e.target as HTMLInputElement).setCustomValidity('')}
                     />
                 </div>
 
@@ -130,6 +141,8 @@ export default function ContactForm() {
                         className={inputClasses('telefono')}
                         required
                         disabled={isSubmitting}
+                        onInvalid={(e) => (e.target as HTMLInputElement).setCustomValidity('Por favor, completa este campo.')}
+                        onInput={(e) => (e.target as HTMLInputElement).setCustomValidity('')}
                     />
                 </div>
 
@@ -145,6 +158,8 @@ export default function ContactForm() {
                         className={inputClasses('empresa')}
                         required
                         disabled={isSubmitting}
+                        onInvalid={(e) => (e.target as HTMLInputElement).setCustomValidity('Por favor, completa este campo.')}
+                        onInput={(e) => (e.target as HTMLInputElement).setCustomValidity('')}
                     />
                 </div>
 
@@ -160,6 +175,8 @@ export default function ContactForm() {
                         className={`${inputClasses('mensaje')} resize-none`}
                         required
                         disabled={isSubmitting}
+                        onInvalid={(e) => (e.target as HTMLTextAreaElement).setCustomValidity('Por favor, completa este campo.')}
+                        onInput={(e) => (e.target as HTMLTextAreaElement).setCustomValidity('')}
                     />
                 </div>
 
@@ -168,9 +185,13 @@ export default function ContactForm() {
                         type="checkbox"
                         id="privacy"
                         checked={accepted}
-                        readOnly
-                        className="mt-1 w-4 h-4 rounded border-gray-300 text-red-500 focus:ring-red-500 cursor-not-allowed transition-transform"
+                        onChange={(e) => {
+                            setAccepted(e.target.checked);
+                            e.target.setCustomValidity('');
+                        }}
+                        className="mt-1 w-4 h-4 rounded border-gray-300 text-red-500 focus:ring-red-500 cursor-pointer transition-transform"
                         required
+                        onInvalid={(e) => (e.target as HTMLInputElement).setCustomValidity('Debes aceptar la política de privacidad.')}
                     />
                     <label htmlFor="privacy" className="text-red-100 text-sm cursor-pointer">
                         He leído y acepto la{' '}
