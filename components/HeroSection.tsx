@@ -22,7 +22,7 @@ export default function HeroSection() {
                     {/* Left Content */}
                     <div className="text-white">
                         <AnimatedSection animation="fade-up" delay={0}>
-                            <h1 className="text-[1.8rem] sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                            <h1 className="text-[1.9rem] sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight mb-6">
                                 Agencia de Marketing Digital para Empresas Creativas
                             </h1>
                         </AnimatedSection>
