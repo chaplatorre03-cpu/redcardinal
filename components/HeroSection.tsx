@@ -9,7 +9,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section id="inicio" className="min-h-[60vh] flex items-start bg-gradient-to-br from-red-600 via-red-700 to-red-800 pt-[80px] relative overflow-hidden">
+        <section id="inicio" className="min-h-[60vh] flex items-start bg-gradient-to-br from-red-600 via-red-700 to-red-800 mt-[96px] pt-2 relative overflow-hidden">
             {/* Animated background blobs */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-20 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl blob blob-1"></div>
@@ -17,7 +17,7 @@ export default function HeroSection() {
                 <div className="absolute bottom-20 left-1/4 w-72 h-72 bg-white/5 rounded-full blur-3xl blob blob-3"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:pl-8 lg:pr-16 py-4 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:pl-8 lg:pr-16 pt-2 pb-4 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div className="text-white">
@@ -34,7 +34,7 @@ export default function HeroSection() {
                         </AnimatedSection>
 
                         <AnimatedSection animation="fade-up" delay={200}>
-                            <div className="space-y-4 text-red-100 mb-8 max-w-lg">
+                            <div className="space-y-4 text-red-100 mb-11 max-w-lg">
                                 <p>
                                     Las redes sociales se han convertido en una herramienta digital necesaria e imprescindible
                                     para el <strong className="text-white">crecimiento, la reputación, la generación de clientes y credibilidad</strong> de las empresas.
@@ -46,7 +46,7 @@ export default function HeroSection() {
                             </div>
                         </AnimatedSection>
 
-                        <AnimatedSection animation="fade-up" delay={300} className="mb-12">
+                        <AnimatedSection animation="fade-up" delay={300} className="mb-6">
                             <a
                                 href="#contacto"
                                 onClick={(e) => {

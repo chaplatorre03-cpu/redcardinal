@@ -43,7 +43,7 @@ export default function WhyChooseUsSection() {
     ];
 
     return (
-        <section id="nosotros" className="pt-8 pb-16 md:pt-10 md:pb-24 bg-gradient-to-br from-red-600 via-red-700 to-red-800 relative overflow-hidden">
+        <section id="nosotros" className="pt-8 pb-8 md:pt-10 md:pb-12 bg-gradient-to-br from-red-600 via-red-700 to-red-800 relative overflow-hidden">
             {/* Animated background */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-10 left-10 w-40 h-40 bg-white/5 rounded-full blur-3xl blob blob-1"></div>
@@ -66,13 +66,16 @@ export default function WhyChooseUsSection() {
                             key={index}
                             animation="fade-up"
                             delay={index * 100}
+                            className="h-full"
                         >
-                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20 card-animated hover:bg-white/20">
-                                <div className="w-16 h-16 bg-red-400 rounded-xl flex items-center justify-center mx-auto mb-4 hover-scale">
-                                    {reason.icon}
+                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20 card-animated hover:bg-white/20 h-full flex flex-col justify-between">
+                                <div>
+                                    <div className="w-16 h-16 bg-red-400 rounded-xl flex items-center justify-center mx-auto mb-4 hover-scale">
+                                        {reason.icon}
+                                    </div>
+                                    <h4 className="text-white font-bold text-lg mb-2">{reason.title}</h4>
+                                    <p className="text-red-100 text-sm">{reason.description}</p>
                                 </div>
-                                <h4 className="text-white font-bold text-lg mb-2">{reason.title}</h4>
-                                <p className="text-red-100 text-sm">{reason.description}</p>
                             </div>
                         </AnimatedSection>
                     ))}
