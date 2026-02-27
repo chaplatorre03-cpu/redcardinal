@@ -17,7 +17,7 @@ export default function ClientsSection() {
     const scrollClients = [...clients, ...clients];
 
     return (
-        <section id="clientes" className="py-20 pb-32 bg-white border-y border-gray-100 overflow-hidden relative">
+        <section id="clientes" className="pt-10 md:pt-20 pb-16 md:pb-32 bg-white border-y border-gray-100 overflow-hidden relative">
             {/* Background decoration */}
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
 

@@ -70,7 +70,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Right - Phone Mockup */}
-                    <AnimatedSection animation="fade-left" delay={200} className="flex justify-center lg:justify-end -mt-12 lg:mt-0">
+                    <AnimatedSection animation="fade-left" delay={200} className="flex justify-center lg:justify-end -mt-4 lg:mt-0">
                         <div className="relative w-72 md:w-80">
                             {/* Phone Frame */}
                             <div className="bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl hover-lift">
